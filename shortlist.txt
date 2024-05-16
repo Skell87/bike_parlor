@@ -1,0 +1,5 @@
+a short list of stuff to update or do.
+
+1. give cancel functionality to all menus, especially delete menus
+inventory by alphabet
+can model info be printed as a table.

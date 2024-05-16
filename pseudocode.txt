@@ -1,0 +1,80 @@
+must have:
+    functions in a script to perform CRUD on all models.
+
+Should Have:
+    menu of options
+        order more vehicles
+        create new customers
+        create a customer order
+            removes item from stock
+        display inventory
+        cancel a customer order 
+            returns items to stock
+        make an order paid
+
+could have:
+    extend models with more functionality
+        price, different vehicle types, color etc
+    extend menu of options to handle full CRUD options for each models
+    nest menu options for better user flow
+    display order history for a customer
+
+wish list
+    add more models to track and manage vehicle components
+        example: bicycle takes 2 wheels, 1 seat, and a handle
+        each component could have a price. the total price of components could be the vehicle price
+    ascii art
+
+
+how am i going to do this.
+    first i want to set up my models and get basic CRUD rolling, that will satisfy the first objective
+        I got the customer and vehicle models up, now ill work on CRUD for customer.
+            
+
+    2nd, i want to include scripts with user input
+        for updating inventory
+        maybe using a class as an inventory updater.
+
+        I got customer CRUD
+        i can add inventory and show inventory
+        i need to update and delete inventory.
+            the challenge with this will be updating the number available,
+            searching by a couple fields instead of all fields.
+            i may simplify this process if needed to make, model.
+        i need to delete bikes from my program.
+        
+        show all, delete by id and quantity, refresh
+            click delete inv,
+            shows all bikes, 2 prompts, cancel, delete by id.
+                if cancel, return to menu ^
+                "enter id to delete"
+                persistent cancel.
+
+        type in and check for a match then delete.
+
+    3rd, i need order functionality. what does this look like?
+        i want a model that has:
+        Customer: first and last name
+        vehicle: make, model, type, color, price
+        unique info: paid status(bool) should set to not paid
+
+
+
+must have, 
+    adding models and setting up crud. 
+
+        how do i want the 3 fields to interact.
+
+        cases:
+        a customer calls in and wants to order a bike
+            relationships:
+                customerOrder
+                    name updates customer sheet with name
+
+                    the bike they want pulls information from the vehicle table.
+                    created_date is the date of the edit.
+                    paid is boolean.
+
+        a customer calls in and wants to change their order
+
+        a customer calls in and wants to delete their order.
