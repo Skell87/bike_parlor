@@ -72,6 +72,10 @@ how am i going to do this.
             create object with name that matches id, bike that matches id
             paid_status should be represented as false automatically.
 
+            i have input checking for the inventory and customer existence.
+            now if that exists maybe assign it to another variable and use it?
+            
+
 
 
 must have, 

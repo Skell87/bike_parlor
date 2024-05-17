@@ -4,3 +4,11 @@ a short list of stuff to update or do.
 inventory by alphabet
 can model info be printed as a table.
 change back input to b instead of numbers.
+have customer order show customers.
+order status is missing bike and needs a space between names.
+see about spacing uniformity on names
+
+
+
+all add customer loops work.
+all update bike loops work
