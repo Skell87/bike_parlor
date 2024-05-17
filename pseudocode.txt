@@ -58,6 +58,20 @@ how am i going to do this.
         vehicle: make, model, type, color, price
         unique info: paid status(bool) should set to not paid
 
+        model is established, now i need to route into a function that 
+        creates an order. 
+        input and menu flow...
+            show customers, ask for which customer you want by id.
+            go back button.
+            can be a one to many
+
+            show bikes, ask for which bike you want by id.
+            go back button
+            must be a many to many
+
+            create object with name that matches id, bike that matches id
+            paid_status should be represented as false automatically.
+
 
 
 must have, 

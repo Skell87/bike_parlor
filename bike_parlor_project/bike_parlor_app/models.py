@@ -21,14 +21,18 @@ class Customer(models.Model):
     def __Str__(self):
         return f'First Name: {self.first_name}, Last Name: {self.last_name}'
 
-# class CustomerOrder(models.Model):
-#     customer = models.TextField()
-#     order = models.TextField()
-#     modified_date = models.DateTimeField()
-#     created_date  = models.DateTimeField(editable=False)
+class CustomerOrder(models.Model):
+    customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
+    # want to set to null, cascade will delete the customer too. needs null=true to work
+    vehicles = models.ManyToManyField(Vehicle)
+    # can add related_name="such n such " to reference info both ways.
+    paid_status = models.BooleanField()
 
-#     def save(self, *args, **kwargs):
-#         if not self.id:
-#             self.created_date = timezone.now()
-#         self.modified_date = timezone.now
-#         return super(CustomerOrder, self).save(*args, **kwargs)
+    def __str__(self):
+        v_list= ""
+        for v in self.vehicles.all():
+            v_list += f'{v.make} {v.model} {v.type} {v.color} {v.price} {v.number_in_stock}'
+        return f'NAME: {self.customer.first_name} {self.customer.last_name} BIKE: {v_list} IS PAID: {self.paid_status}'
+    
+
+    
